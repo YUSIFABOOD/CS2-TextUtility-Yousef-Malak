@@ -2,6 +2,7 @@
 #include <iostream>
 #include "text_utility.h"
 
+
 using namespace std;
 int countVowels(const char* str){
 int countV=0;
