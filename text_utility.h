@@ -1,7 +1,6 @@
 #include<iostream>
 
-bool isPalindrom(const char* s);
-void Lowercase (const char* s);
-void Uppercase (const char* s);
-int substringoccur(const char*s)
-
+bool isPalindrom (char* s);
+void Uppercase (char* s);
+void Lowercase (char* s);
+int substringoccur (char* s);
