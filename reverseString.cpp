@@ -2,19 +2,18 @@
 #include "text_utility.h"
 using namespace std;
 
-void reverseString(char* word) {
-       int count = 0;
-    while (word[length] != '\0') {
-        count++;
-    }
 
 
-    for (int i = 0; i < count / 2; i++) {
-        int j = length - 1 - i;
+void reverseString(int arr[], int n) {
+    int left = 0, right = n - 1;
 
+    while (left < right) {
 
-        word[i] ^= word[j];
-        word[j] ^= word[i];
-        word[i] ^= word[j];
+        arr[left] = arr[left] + arr[right];
+        arr[right] = arr[left] - arr[right];
+        arr[left] = arr[left] - arr[right];
+
+        left++;
+        right--;
     }
 }
