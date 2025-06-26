@@ -2,9 +2,9 @@
 #include "text_utility.h"
 using namespace std;
 
-void countVowelsAndConsonants(const char* str, int& countV, int& countC) {
-    countV = 0;
-    countC = 0;
+void countVowelsAndConsonants(const char* str) {
+   int  countV = 0;
+    int countC = 0;
     int length = countCharacters(str);
 
     for (int i = 0; i < length; i++) {
@@ -19,4 +19,6 @@ void countVowelsAndConsonants(const char* str, int& countV, int& countC) {
                 }
         }
     }
+
+    cout << the number of vowels :<< countV << endl << the number of constansts: << countC << endl;  
 }
