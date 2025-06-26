@@ -1,18 +1,20 @@
 #include <iostream>
+#include "text_utility.h"
 using namespace std;
 
-int count(const char* word) {
-    int length = 0;
+void reverseString(char* word) {
+       int count = 0;
     while (word[length] != '\0') {
-        length++;
+        count++;
     }
-    return length;
+
+
+    for (int i = 0; i < count / 2; i++) {
+        int j = length - 1 - i;
+
+
+        word[i] ^= word[j];
+        word[j] ^= word[i];
+        word[i] ^= word[j];
+    }
 }
-
-int main() {
-    char s[100];
-    cin.getline(s, 100);
-
-    cout << count(s) << endl;
-
-    return 0;
